@@ -13,9 +13,9 @@ export XDG_STATE_HOME="$HOME/.local/state"
 
 create_xdg_basedirs() {
   # ANSI color codes
-  green='\033[0;32m'   # Green
-  cyan='\033[0;36m'    # Cyan
-  nc='\033[0m'         # No Color
+  local green='\033[0;32m' # Green
+  local cyan='\033[0;36m'  # Cyan
+  local nc='\033[0m'       # No Color
 
   for var in \
     XDG_BIN_HOME \
@@ -25,14 +25,14 @@ create_xdg_basedirs() {
     XDG_RUNTIME_DIR \
     XDG_STATE_HOME; do
 
-    dir="${!var}"
+    local dir="${!var}"
 
     # Only under $HOME and not already existing
     if [[ $dir == "$HOME/"* && ! -d $dir ]]; then
       mkdir -p "$dir"
       printf '[%b%s%b] Created directory: %b%s%b\n' \
         "$green" "$var" "$nc" \
-        "$cyan"  "$dir" "$nc"
+        "$cyan" "$dir" "$nc"
     fi
   done
 }
