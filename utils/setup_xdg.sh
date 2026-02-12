@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 set -euo pipefail
 IFS=$'\n\t'
@@ -25,7 +25,7 @@ create_xdg_basedirs() {
     XDG_RUNTIME_DIR \
     XDG_STATE_HOME; do
 
-    local dir="${!var}"
+    local dir="${(P)var}"
 
     # Only under $HOME and not already existing
     if [[ $dir == "$HOME/"* && ! -d $dir ]]; then

@@ -1,5 +1,7 @@
 # XDG Base Directories Plugin for Oh My Zsh
 
+NOTE: This was cloned from https://github.com/krahlos/xdg-basedirs to remove bash support and fix a bug that stopped it from working in zsh
+
 ## Overview
 
 The XDG Base Directories plugin for Oh My Zsh sets up the XDG base directories according to the
@@ -14,7 +16,7 @@ To install the XDG Base Directories plugin, follow these steps:
 1. **Clone the repository** into your Oh My Zsh custom plugins directory:
 
    ```shell
-   git clone https://github.com/krahlos/xdg-basedirs.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/xdg-basedirs
+   git clone https://github.com/AndreiRailean/xdg-basedirs.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/xdg-basedirs
    ```
 2. **Add the plugin to your `.zshrc` file**:
 
@@ -26,16 +28,6 @@ To install the XDG Base Directories plugin, follow these steps:
    ```shell
    source ~/.zshrc
    ```
-
-### Bash Users
-
-If you are using Bash instead of Zsh, you can still use this plugin. Just follow the same
-installation steps, but instead of adding it to your `.zshrc`, add it to your `.bashrc` or
-`.bash_profile`:
-
-```bash
-source /path/to/xdg-basedirs/xdg-basedirs.bash
-```
 
 ## Usage
 
