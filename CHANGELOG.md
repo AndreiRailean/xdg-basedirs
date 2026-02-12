@@ -12,6 +12,12 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ### Removed
 ### Fixed
 
+## [0.3.0]
+
+### Fixed
+
+- Removed `bash` support and fixed zsh indirect expansion
+
 ## [0.2.0]
 
 ### Fixed
